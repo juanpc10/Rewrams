@@ -7,6 +7,10 @@
 }
 
 
+.homepage-container {
+  margin-bottom: 100px;
+}
+
 
 
 
@@ -58,7 +62,7 @@
 
 .about-left {
   /* background-color: blue; */
-  margin-top: 100px;
+  margin-top: 150px;
   width: 35%;
 }
 .about-right {

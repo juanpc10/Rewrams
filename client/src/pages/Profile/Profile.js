@@ -12,27 +12,14 @@ import Loader from '../../components/Loader/Loader';
 import requireAuth from '../../hoc/requireAuth';
 import { profileSchema } from './validation';
 
-import './styles.css';
+import './Profile.css';
 
-//// nema password za oauth usere ni na klijentu ni serveru
-// validacija na serveru i error handilng na clientu
-// css i html
-//// delete user i logika da ne brise seedovane
-//// admin ruta i hoc
-// error handling login register posto je zajednicki loading i error
-//// mongo atlas i heroku deploy package json i promenljive env i config
-//// avatar staza u bazu samo fajl
-//// gitignore za placeholder avatar
-//// delete profile ruta
 
-// hendlovanje staza za slike, default avatar za izbrisane sa heroku
-// readme
-//// posle edit user treba redirect na novi username url
 
-// fore
-// za facebook more https apsolutni callback url
-// FACEBOOK_CALLBACK_URL=https://mern-boilerplate-demo.herokuapp.com/auth/facebook/callback
-// da bi prihvatio fb domen mora dole da se poklapa sa siteurl
+
+
+
+
 
 const Profile = ({
   getProfile,
@@ -101,43 +88,48 @@ const Profile = ({
   return (
     <Layout>
       <div className="profile">
-        <h1>Profile page</h1>
-        <p>
-          This is the profile page. User can edit his own profile and Admin can edit any user's
-          profile. Only authenticated users can see this page.
-        </p>
+
+        <div className="profile-header">
+          <h2>Profile</h2>
+        </div>
+        <div className="profile-container">
+
+          <div className="profile-picture">
+            <img src={image ? image : profile.avatar} className="avatar" />
+          </div>
+          <div className="profile-info">
+              <div className="profile-data-row">
+                <p className="label">Name: </p>
+                <p className="info">{profile.name}</p>
+              </div>
+              <div className="profile-data-row">
+                <p className="label">Login: </p>
+                <p className="info">{profile.provider}</p>
+              </div>      
+              <div className="profile-data-row">
+                <p className="label">Username: </p>
+                <p className="info">{profile.username}</p>
+              </div>
+              <div className="profile-data-row">
+                <p className="label">Email: </p>
+                <p className="info">{profile.email}</p>
+              </div>
+              <div className="profile-data-row">
+                <p className="label">Joined: </p>
+                <p className="info">
+                  {moment(profile.createdAt).format('dddd, MMMM Do YYYY')}
+                </p>
+              </div>
+          </div>
+
+        </div>
+
         {isLoading ? (
           <Loader />
         ) : (
-          <div className="profile-info">
-            <img src={image ? image : profile.avatar} className="avatar" />
+          
+          <div className="profile-button-area">
             <div className="info-container">
-              <div>
-                <span className="label">Provider: </span>
-                <span className="info">{profile.provider}</span>
-              </div>
-              <div>
-                <span className="label">Role: </span>
-                <span className="info">{profile.role}</span>
-              </div>
-              <div>
-                <span className="label">Name: </span>
-                <span className="info">{profile.name}</span>
-              </div>
-              <div>
-                <span className="label">Username: </span>
-                <span className="info">{profile.username}</span>
-              </div>
-              <div>
-                <span className="label">Email: </span>
-                <span className="info">{profile.email}</span>
-              </div>
-              <div>
-                <span className="label">Joined: </span>
-                <span className="info">
-                  {moment(profile.createdAt).format('dddd, MMMM Do YYYY, H:mm:ss')}
-                </span>
-              </div>
               <div>
                 <button
                   className="btn"
@@ -145,11 +137,14 @@ const Profile = ({
                   onClick={handleClickEdit}
                   disabled={!(me?.username === profile.username || me?.role === 'ADMIN')}
                 >
+
+
                   {isEdit ? 'Cancel' : 'Edit'}
                 </button>
               </div>
             </div>
           </div>
+          
         )}
 
         {error && <p className="error">{error}</p>}
@@ -249,3 +244,11 @@ export default compose(
   withRouter,
   connect(mapStateToProps, { getProfile, editUser, deleteUser, loadMe }),
 )(Profile);
+
+
+
+
+
+
+
+

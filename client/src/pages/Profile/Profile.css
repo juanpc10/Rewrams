@@ -1,0 +1,114 @@
+
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-header h2 {
+  font-size: 28px;
+  font-weight: 450;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.profile-picture {
+  /* background-color: red; */
+  width: 30%;
+  height: 400px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.profile-info {
+  /* background-color: blue; */
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 30px;
+}
+
+.profile-data-row {
+  display: flex;
+  flex-direction: row;
+}
+.profile-data-row p {
+  margin-left: 8px;
+}
+
+.profile-data-row .label {
+  font-weight: bolder;
+  color: gray;
+}
+
+
+
+
+/* .profile-info-data {
+  margin-left: 40px;
+} */
+
+/* .profile {
+  margin-bottom: 350px;
+}
+
+
+.profile .profile-info {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.profile .avatar {
+  width: 220px;
+  height: 220px;
+  align-self: center;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.profile .label,
+.profile label {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.profile .info {
+  font-size: 18px;
+}
+
+.profile .info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile .btn {
+  width: auto;
+  margin-right: 10px;
+}
+
+.profile input {
+  width: 40%;
+  display: block;
+}
+
+.profile .input-div {
+
+}
+.profile .form {
+  margin-bottom: 30px;
+} */
