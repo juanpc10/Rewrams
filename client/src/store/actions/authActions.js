@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { getMessages } from './messageActions';
+// import { getMessages } from './messageActions';
 import {
   LOGIN_WITH_OAUTH_LOADING,
   LOGIN_WITH_OAUTH_SUCCESS,
@@ -104,7 +104,7 @@ export const reseedDatabase = () => async (dispatch, getState) => {
       type: RESEED_DATABASE_SUCCESS,
     });
     dispatch(logOutUser());
-    dispatch(getMessages());
+    // dispatch(getMessages());
   } catch (err) {
     dispatch({
       type: RESEED_DATABASE_FAIL,

@@ -4,6 +4,9 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import Cookies from 'js-cookie';
 
+import { GlobalProvider } from './context/globalState';
+
+
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Home from './pages/Home/Home';
@@ -43,20 +46,22 @@ const App = ({ logInUserWithOauth, auth, loadMe }) => {
   return (
     <>
       {auth.appLoaded ? (
-        <Switch>
-          <Route path="/login" component={Login} />
-          <Route path="/register" component={Register} />
-          <Route path="/notfound" component={NotFound} />
-          <Route path="/admin" component={Admin} />
+         <GlobalProvider>
+          <Switch>
+            <Route path="/login" component={Login} />
+            <Route path="/register" component={Register} />
+            <Route path="/notfound" component={NotFound} />
+            <Route path="/admin" component={Admin} />
 
-          {/* <Route path="/about" component={Home} /> */}
-          <Route path="/more" component={More} />
-          <Route path="/:username/dashboard" component={Dashboard} />
-          <Route path="/:username/campaigns" component={Campaigns} />
-          <Route exact path="/:username" component={Profile} />
-          <Route exact path="/" component={Home} />
-          <Route component={NotFound} />
-        </Switch>
+            {/* <Route path="/about" component={Home} /> */}
+            <Route path="/more" component={More} />
+            <Route path="/:username/dashboard" component={Dashboard} />
+            <Route path="/:username/campaigns" component={Campaigns} />
+            <Route exact path="/:username" component={Profile} />
+            <Route exact path="/" component={Home} />
+            <Route component={NotFound} />
+          </Switch>
+         </GlobalProvider>
       ) : (
         <Loader />
       )}
