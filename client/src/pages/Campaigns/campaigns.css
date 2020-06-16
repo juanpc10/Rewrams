@@ -12,6 +12,11 @@
   color: black;
 }
 
+.ig-header h2 {
+  font-size: 30px;
+  font-weight: 450;
+}
+
 .ig-pagebody {
   display: flex;
   flex-direction: row;
@@ -126,6 +131,14 @@
   height: 25px;
 }
 
+
+#cumulative-input-margin-top {
+  margin-top: 10px;
+}
+
+#cumulative-maxdisc-value-margin-top {
+  margin-top: 10px;
+}
 
 .instant {
   margin-left: 60px;

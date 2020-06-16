@@ -63,10 +63,9 @@ const Navbar = ({ auth, logOutUser, history }) => {
           <>
 
             <li className="flex-1" />
-
-            <li className="nav-item">
-              <Link to="/login">Login</Link>
-            </li>
+              <li className="nav-item">
+                <Link to="/login"  id="login-button">Login</Link>
+              </li>
           </>
         )}
       </ul>

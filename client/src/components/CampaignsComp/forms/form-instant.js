@@ -1,48 +1,50 @@
 import React, {useState, useContext } from 'react';
-// import { GlobalContext } from '../../../../context/globalState';
+import { GlobalContext } from '../../../context/globalState';
 
 
 
 
-export const FormInstant = () => {
-  // const [discountInstant, handleChangeDiscountIn] = useState('');
-  // const { addSingleEvent } = useContext(GlobalContext);
 
+export const FormInstant = (user) => {
+  const [discountInstant, handleChangeDiscountIn] = useState('');
+  const { addSingleEvent } = useContext(GlobalContext);
+
+  const username = user.nameuser;
   const onSubmit = e => {
-    const URL = "http://localhost:3001/coupons/";
+    const URL = "http://localhost:3201/" + username + "/coupons/";
  
-      // fetch(URL+ '5ededa312d55c83afbbadd7a/disc/' + discountInstant, { method: 'put' })
-      //   .then(res => res.text())
-      //   .then(res => console.log(res))
+      fetch(URL+ '5ee83dd3f513361a5ff6c2ca/disc/' + discountInstant, { method: 'put' })
+        .then(res => res.text())
+        .then(res => console.log(res))
       
-      // fetch(URL + '5ededa312d55c83afbbadd7a/max/' + discountInstant, { method: 'put' })
-      //   .then(res => res.text())
-      //   .then(res => console.log(res));
+      fetch(URL + '5ee83dd3f513361a5ff6c2ca/max/' + discountInstant, { method: 'put' })
+        .then(res => res.text())
+        .then(res => console.log(res));
 
-      // //changing status of instant coupons to true
-      // fetch(URL + '5ededa312d55c83afbbadd7a/1/', { method: 'put' })
-      //   .then(res => res.text())
-      //   .then(res => console.log(res));
+      //changing status of instant coupons to true
+      fetch(URL + '5ee83dd3f513361a5ff6c2ca/1/', { method: 'put' })
+        .then(res => res.text())
+        .then(res => console.log(res));
 
-      // //changing status of cumulative coupons to false
-      // fetch(URL + '5ededa5e2d55c83afbbadd7b/0/', { method: 'put' })
-      //   .then(res => res.text())
-      //   .then(res => console.log(res));
+      //changing status of cumulative coupons to false
+      fetch(URL + '5ee83df0f513361a5ff6c2cb/0/', { method: 'put' })
+        .then(res => res.text())
+        .then(res => console.log(res));
       
       let newItemCu = {}
       newItemCu.type = 'instant';
-      // newItemCu.discount = discountInstant;
-      // newItemCu.maxDiscount = discountInstant;
+      newItemCu.discount = discountInstant;
+      newItemCu.maxDiscount = discountInstant;
       newItemCu.active = true;
-      // addSingleEvent(newItemCu);  
+      addSingleEvent(newItemCu);  
 
     }
   return (
     <form onSubmit={onSubmit}>
       <div className='form-input-discount'>
         <p>Discount</p>
-        <input></input>
-        {/* <input id='instant-input1' className='settings-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off' placeholder={discountInstant} value={discountInstant} onChange={(a) => handleChangeDiscountIn(a.target.value)} ></input> */}
+        {/* <input></input> */}
+        <input id='instant-input1' className='settings-input' type='number' name='discountInstant' min="0" max="100" autocomplete='off' placeholder={discountInstant} value={discountInstant} onChange={(a) => handleChangeDiscountIn(a.target.value)} ></input>
       </div>
       <div className='max-disc'>
         <p></p>

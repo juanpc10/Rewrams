@@ -14,7 +14,9 @@ import CardType from '../../components/CampaignsComp/values/campaign-type-card';
 
 
 
-const Campaigns = () => {
+const Campaigns = ({match}) => {
+
+  const user =match.params;
 
   return (
     <Layout>
@@ -27,13 +29,13 @@ const Campaigns = () => {
         <div className='ig-pagebody'>
           <div className='left'> 
           <p className='ig-campaign-instruction'>Choose a campaign and click change to modify your current Campaign Settings</p>
-            <CampaignsPanel />
+            <CampaignsPanel username={user.username} />
           <p className='ig-campaign-footer'>Campaigns are linked to Instagram stories only for the moment</p>
           </div>
           <div className='right'>
             <p>Current active campaign</p>
 
-            <CardType />
+            <CardType username={user.username} />
           
           </div>
         </div>

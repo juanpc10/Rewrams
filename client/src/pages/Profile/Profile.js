@@ -35,11 +35,13 @@ const Profile = ({
   const [image, setImage] = useState(null);
   const [avatar, setAvatar] = useState(null);
   const retryCount = useRef(0);
-  const matchUsername = match.params.username;
 
+  console.log(match);
+  const matchUsername = match.params.username;
   useEffect(() => {
     getProfile(matchUsername, history);
   }, [matchUsername]);
+
 
   // if changed his own username reload me, done in userActions
 
@@ -122,7 +124,7 @@ const Profile = ({
               </div>
           </div>
 
-        </div>
+        {/* </div> */}
 
         {isLoading ? (
           <Loader />
@@ -132,13 +134,12 @@ const Profile = ({
             <div className="info-container">
               <div>
                 <button
+                  id="profile-edit-button"
                   className="btn"
                   type="button"
                   onClick={handleClickEdit}
                   disabled={!(me?.username === profile.username || me?.role === 'ADMIN')}
                 >
-
-
                   {isEdit ? 'Cancel' : 'Edit'}
                 </button>
               </div>
@@ -150,8 +151,101 @@ const Profile = ({
         {error && <p className="error">{error}</p>}
 
         {isEdit && (
-          <div className="form">
-            <form onSubmit={formik.handleSubmit}>
+          <div className="form-edit-cancel-profile">
+
+
+
+
+            <div className="profile-edit-form-container">
+              <form onSubmit={formik.handleSubmit} >
+                <div className="form-elements">
+                  <div className="edit-profile labels">
+                    <label id="label-image">Image:</label>
+                    <input   name="image" type="file" onChange={onChange} />
+                    {image && (
+                      <button
+                        id="choose-file-btn"
+                        onClick={() => {
+                          setImage(null);
+                          setAvatar(null);
+                        }}
+                        type="button"
+                      >
+                        Remove Image
+                      </button>
+                    )}
+                </div>
+              <input name="id" type="hidden" value={formik.values.id} />
+              <div className="input-div">
+                <label id="label-name">Name:</label>
+                <input
+                  placeholder="Name"
+                  name="name"
+                  className=""
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.name}
+                />
+                {formik.touched.name && formik.errors.name ? (
+                  <p className="error">{formik.errors.name}</p>
+                ) : null}
+              </div>
+              <div className="input-div">
+                <label id="label-username" >Username:</label>
+                <input
+                  placeholder="Username"
+                  name="username"
+                  className=""
+                  type="text"
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.username}
+                />
+                {formik.touched.username && formik.errors.username ? (
+                  <p className="error">{formik.errors.username}</p>
+                ) : null}
+              </div>
+              {profile.provider === 'email' && (
+                <div className="input-div">
+                  <label id="label-password">Password:</label>
+                  <input
+                    placeholder="Password"
+                    name="password"
+                    className=""
+                    type="password"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                  />
+                  {formik.touched.password && formik.errors.password ? (
+                    <p className="error">{formik.errors.password}</p>
+                  ) : null}
+                </div>
+              )}
+              <button type="submit" className="btn">
+                Save
+              </button>
+              {/* <button
+                onClick={() => handleDeleteUser(profile.id, history)}
+                type="button"
+                className="btn"
+              >
+                Delete profile
+              </button> */}
+                  
+                </div>
+              </form>
+            </div> 
+          
+
+
+
+
+
+
+
+            {/* <form onSubmit={formik.handleSubmit}>
               <div>
                 <label>Avatar:</label>
                 <input name="image" type="file" onChange={onChange} />
@@ -226,9 +320,11 @@ const Profile = ({
               >
                 Delete profile
               </button>
-            </form>
-          </div>
+            </form> */}
+          </div> 
         )}
+
+        </div>
       </div>
     </Layout>
   );

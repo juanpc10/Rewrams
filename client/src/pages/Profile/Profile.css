@@ -19,12 +19,14 @@
 .profile-container {
   display: flex;
   flex-direction: row;
+  /* background-color: yellowgreen; */
+  margin-bottom: 300px;
 }
 
 
 .profile-picture {
   /* background-color: red; */
-  width: 30%;
+  width: 24%;
   height: 400px;
   display: flex;
   justify-content: flex-end;
@@ -32,7 +34,7 @@
 }
 .profile-info {
   /* background-color: blue; */
-  width: 400px;
+  width: 300px;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -56,59 +58,46 @@
 
 
 
+#label-image {
+  margin-right: 48px;
+  }
+#label-name {
+  margin-right: 50px;
+  }
+#label-username {
+  margin-right: 19px;
+  }
+#label-password {
+margin-right: 20px;
+}
 
-/* .profile-info-data {
-  margin-left: 40px;
-} */
-
-/* .profile {
-  margin-bottom: 350px;
+#profile-edit-button {
+  background-color: red;
+  width: 100px;
+  height: 30px;
+  border: none;
+  color: white;
+  font-weight: 750;
 }
 
 
-.profile .profile-info {
+.profile-button-area {
+  /* background-color: tomato; */
   display: flex;
-  padding-bottom: 20px;
+  align-items: center;
+  
 }
 
-.profile .avatar {
-  width: 220px;
-  height: 220px;
-  align-self: center;
-  margin-right: 20px;
-  object-fit: cover;
-}
 
-.profile .label,
-.profile label {
-  font-size: 18px;
-  font-weight: bold;
-  margin-right: 10px;
-}
-
-.profile .info {
-  font-size: 18px;
-}
-
-.profile .info-container {
+.form-edit-cancel-profile {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  align-items: center;
+  /* background-color: saddlebrown; */
+  margin-top: 100px;
+  margin-left: 20px;
 }
 
-.profile .btn {
-  width: auto;
-  margin-right: 10px;
+.profile-edit-form-container {
+  /* background-color: purple; */
+  width: 400px;
 }
-
-.profile input {
-  width: 40%;
-  display: block;
-}
-
-.profile .input-div {
-
-}
-.profile .form {
-  margin-bottom: 30px;
-} */
