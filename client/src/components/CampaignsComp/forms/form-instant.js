@@ -9,25 +9,26 @@ export const FormInstant = (user) => {
   const [discountInstant, handleChangeDiscountIn] = useState('');
   const { addSingleEvent } = useContext(GlobalContext);
 
-  const username = user.nameuser;
+  // const username = user.nameuser;
+
   const onSubmit = e => {
-    const URL = "http://localhost:3201/" + username + "/coupons/";
+    const URL = "http://localhost:3201/coupons/";
  
-      fetch(URL+ '5ee83dd3f513361a5ff6c2ca/disc/' + discountInstant, { method: 'put' })
+      fetch(URL+ '5ee9a94ba58b6b4c7d06fc2d/disc/' + discountInstant, { method: 'put' })
         .then(res => res.text())
         .then(res => console.log(res))
       
-      fetch(URL + '5ee83dd3f513361a5ff6c2ca/max/' + discountInstant, { method: 'put' })
+      fetch(URL + '5ee9a94ba58b6b4c7d06fc2d/max/' + discountInstant, { method: 'put' })
         .then(res => res.text())
         .then(res => console.log(res));
 
       //changing status of instant coupons to true
-      fetch(URL + '5ee83dd3f513361a5ff6c2ca/1/', { method: 'put' })
+      fetch(URL + '5ee9a94ba58b6b4c7d06fc2d/1/', { method: 'put' })
         .then(res => res.text())
         .then(res => console.log(res));
 
       //changing status of cumulative coupons to false
-      fetch(URL + '5ee83df0f513361a5ff6c2cb/0/', { method: 'put' })
+      fetch(URL + '5ee9a977a58b6b4c7d06fc2e/0/', { method: 'put' })
         .then(res => res.text())
         .then(res => console.log(res));
       

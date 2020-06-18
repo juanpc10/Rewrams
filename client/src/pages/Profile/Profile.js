@@ -39,7 +39,7 @@ const Profile = ({
   console.log(match);
   const matchUsername = match.params.username;
   useEffect(() => {
-    getProfile(matchUsername, history);
+    getProfile(matchUsername, history);   // eslint-disable-next-line
   }, [matchUsername]);
 
 
@@ -60,8 +60,8 @@ const Profile = ({
     formik.setFieldValue('name', profile.name);
     formik.setFieldValue('username', profile.username);
   };
-
-  const handleDeleteUser = (id, history) => {
+  // eslint-disable-next-line
+  const handleDeleteUser = (id, history) => {   
     deleteUser(id, history);
   };
 
@@ -97,7 +97,7 @@ const Profile = ({
         <div className="profile-container">
 
           <div className="profile-picture">
-            <img src={image ? image : profile.avatar} className="avatar" />
+            <img src={image ? image : profile.avatar} className="avatar" alt="avatar-profile" />
           </div>
           <div className="profile-info">
               <div className="profile-data-row">

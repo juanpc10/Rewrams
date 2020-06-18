@@ -28,12 +28,6 @@ const Navbar = ({ auth, logOutUser, history }) => {
 
       <ul className="nav-links flex-1">
 
-        {/* <li className="nav-item">
-          <Link to="/">Home</Link>
-        </li> */}
-        {/* <li className="nav-item">
-          <Link to="/about">About</Link>
-        </li> */}
         {auth.isAuthenticated ? (
           <>
             <li className="nav-item">
@@ -54,16 +48,16 @@ const Navbar = ({ auth, logOutUser, history }) => {
               </li>
             )}
             <li className="flex-1" />
-            <img className="avatar" src={auth.me.avatar} />
+            <img className="avatar" src={auth.me.avatar} alt="avatar-img" />
             <li className="nav-item" onClick={onLogOut}>
-              <a href="#">Log out</a>
+              <a href="/">Log out</a>
             </li>
           </>
         ) : (
           <>
 
             <li className="flex-1" />
-              <li className="nav-item">
+              <li className="nav-item">  
                 <Link to="/login"  id="login-button">Login</Link>
               </li>
           </>

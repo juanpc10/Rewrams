@@ -28,9 +28,6 @@
 
 
 
-.about-rewrams {
-  margin-bottom: 100px;
-}
 
 .about-rewrams p {
   margin-top: 40px;
@@ -50,7 +47,7 @@
 .about-container {
   display: flex;
   flex-direction: row;
-  margin-bottom: 200px;
+  margin-bottom: 300px;
   /* background-color: blue; */
 }
 

@@ -2,9 +2,9 @@ const Coupon = require('../models/coupon');
 
 
 
-async function getCoupons (_, res) {
+async function getUserCoupons (req, res) {
   try {
-    const coupons = await Coupon.find();
+    const coupons = await Coupon.find({username: req.params.username});
     res.status(200);
     res.json(coupons);
   } catch (error) {
@@ -13,10 +13,10 @@ async function getCoupons (_, res) {
   }
 }
 
-async function postCoupons (req, res) {
+async function postUserCoupons (req, res) {
   try {
-    const { type, discount, maxDiscount, active } = req.body;
-    const coupon = Coupon.create( { type, discount, maxDiscount, active } );
+    const { username, type, discount, maxDiscount, active } = req.body;
+    const coupon = Coupon.create( { username, type, discount, maxDiscount, active } );
     res.status(200);
     res.json(coupon);
   } catch (error) {
@@ -26,7 +26,7 @@ async function postCoupons (req, res) {
 }
 
 
-async function deleteCoupon (req, res) {
+async function deleteUserCoupon (req, res) {
   try {
     await Coupon.findByIdAndDelete({_id: req.params.id});
     res.sendStatus(204);
@@ -36,7 +36,7 @@ async function deleteCoupon (req, res) {
   }
 }
 
-async function changeDiscount (req, res) {
+async function changeUserDiscount (req, res) {
   try {
     const disc = Number(req.params.num);
     const coupon = await Coupon.findByIdAndUpdate(
@@ -52,7 +52,7 @@ async function changeDiscount (req, res) {
   }
 }
 
-async function changeMaxDiscount (req, res) {
+async function changeUserMaxDiscount (req, res) {
   try {
     const max = Number(req.params.num);
     const coupon = await Coupon.findByIdAndUpdate(
@@ -68,7 +68,7 @@ async function changeMaxDiscount (req, res) {
   }
 }
 
-async function changeStatus (req, res) {
+async function changeUserStatus (req, res) {
   try {
     const status = req.params.active;
     const coupon = await Coupon.findByIdAndUpdate(
@@ -87,10 +87,10 @@ async function changeStatus (req, res) {
 
 
 module.exports = {
-  getCoupons,
-  postCoupons,
-  deleteCoupon,
-  changeDiscount,
-  changeMaxDiscount,
-  changeStatus
+  getUserCoupons,
+  postUserCoupons,
+  deleteUserCoupon,
+  changeUserDiscount,
+  changeUserMaxDiscount,
+  changeUserStatus
 };

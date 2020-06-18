@@ -146,9 +146,9 @@ const VirtualizedTable = withStyles(styles)(MuiVirtualizedTable);
 const sample = [
   ['Eduardo Sanchez', 'eduardo_442', '2 days ago', 24, '$40', '20%', 18, 0.75],
   ['John Hernandez', 'jhdez_873', '28 days ago', 7, '$22', '40%', 3, 0.42],
-  ['Daniel Bilzerian', 'dbzerian_996', '1 days ago', 1013, '$1,463', '60%', 895, 0.88],
+  ['Pablo Carrillo', 'dbzerian_996', '1 days ago', 1013, '$1,463', '60%', 895, 0.88],
   ['Joaquin Guzman', 'chapu_$$11', '77 days ago', 400, '$1,000,000', '10%', 396, 0.99],
-  ['Pablo Escobar', 'pablitomoney_9389', '18 days ago', 568, '$80,345', '5%', 765, 0.05],
+  ['John Anderson', 'pablitomoney_9389', '18 days ago', 568, '$80,345', '5%', 765, 0.05],
 ];
 
 function createData(id, name, username, lastActivity, orders, averageOrderValue, currentDiscount, mediaShares, shareRatio) {

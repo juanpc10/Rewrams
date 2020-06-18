@@ -1,8 +1,10 @@
 const Dm = require('../models/dm');
 
-async function getDms (_, res) {
+
+
+async function getUserDms (req, res) {
   try {
-    const dms = await Dm.find();
+    const dms = await Dm.find({account: req.params.account});
     res.status(200);
     res.json(dms);
   } catch (error) {
@@ -11,10 +13,10 @@ async function getDms (_, res) {
   }
 }
 
-async function postDms (req, res) {
+async function postUserDm (req, res) {
   try {
-    const { username, full_name, lastMessage } = req.body;
-    const dm = Dm.create( { username, full_name, lastMessage } );
+    const { account, username, full_name, lastMessage } = req.body;
+    const dm = Dm.create( { account, username, full_name, lastMessage } );
     res.status(200);
     res.json(dm);
   } catch (error) {
@@ -23,7 +25,8 @@ async function postDms (req, res) {
   }
 }
 
-async function deleteDm (req, res) {
+
+async function deleteUserDms (req, res) {
   try {
     await Dm.findByIdAndDelete({_id: req.params.id});
     res.sendStatus(204);
@@ -39,7 +42,8 @@ async function deleteDm (req, res) {
 
 
 module.exports = {
-  getDms,
-  postDms,
-  deleteDm
+  getUserDms,
+  postUserDm,
+  deleteUserDms,
+  getUserDms
 };

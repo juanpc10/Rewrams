@@ -8,7 +8,7 @@ export default {
 
 async function fetchRequest (user) {
   try {
-    const res = await fetch(BASE_URL + user + '/coupons');
+    const res = await fetch(BASE_URL + 'coupons/' + user);
     const res_1 = res.status <= 400 ? res : Promise.reject(res);
     return await res_1.json();
   }

@@ -29,7 +29,7 @@ function NetRevenue () {
       // type: 'datetime',
       categories: [ '2018 Q1' ,'2018 Q2','2018 Q3','218 Q4','2019 Q1', '2019 Q2', '2019 Q3', '2019 Q4', '2020 Q1', '2020 Q2']
     },
-    colors:['rgb(54, 247, 118)', 'rgb(6, 24, 180);'],
+    colors:['rgb(54, 247, 118)', 'rgb(6, 24, 180)'],
     tooltip: {
       x: {
         // format: 'dd/MM/yy HH:mm'

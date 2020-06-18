@@ -38,7 +38,7 @@ function Orders () {
     toolbar: {
       enabled: false
     },
-    colors:['rgb(143, 26, 252);', 'rgb(87, 104, 255);']
+    colors:['rgb(143, 26, 252)', 'rgb(87, 104, 255)']
   
   }
 

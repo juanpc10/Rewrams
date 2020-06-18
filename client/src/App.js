@@ -35,7 +35,7 @@ const App = ({ logInUserWithOauth, auth, loadMe }) => {
     if (cookieJwt) {
       Cookies.remove('x-auth-cookie');
       logInUserWithOauth(cookieJwt);
-    }
+    }               // eslint-disable-next-line
   }, []);
 
   useEffect(() => {
