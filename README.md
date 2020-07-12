@@ -1,6 +1,7 @@
 # rewrams
 
-![wireframe](visuals/rewrams.png)
+<img width="460" height="300" src="./visuals/rewrams.png">
+<!-- ![wireframe](visuals/rewrams.png) -->
 
 Rewarding customers
 
