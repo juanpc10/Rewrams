@@ -4,47 +4,31 @@ Rewrams "Rewarding Customers".
 
 ## Repository
 
-Create a public GitHub repo to host your project and paste its URL here.
-
 https://github.com/juanpc10/rewrams.git
 
 ## One liner
-
-Write a very short sentence (< 10 words) that describes what your app is about (e.g. "Airbnb for boats", or "Movies recommendation engine").
 
 Social media reward system for customers
 
 ## Project description
 
-Provide a short description of what the app does (< 1000 characters).
-
-Allows business managers to set the discount percent they would like to provide their customers if they share their experience in the social media of choice
+Allows business managers to set the discount percent they would like to provide to their customers if they share their experience in the social media of choice
 
 ## MVP
-
-Choose the core feature that most defines your app and you’ll start to tackle first (e.g. "Users should be able to take a picture of a food item 
-with their smartphone and receive a list of recipes based on that ingredient").
 
 Instant and cumulative coupon delivery to users experiencing a product or service. Users take a picture related to their experience with the product/service (e.g. selfie in the gym, selfie dining with friends in a restaurant) and then they receive a coupon code equal to whatever value or cumulative value (if user has had more than one coupon) established already by the business in our app settings that can be changed within the business user account, updating his database with order discount and allowing customer checkout.
 
 ## Tech stack
 
-Does your app have a client, a server, or both? If it has a client, is it web or mobile? What frameworks, databases, or relevant libraries are 
-you going to use? Fill the fields here below as needed.
 
-MERN stack.
+MERN: Mongoose, Express, React, Node
 
-
-
-For this project the app will work with the instagram api but I would like to later on to provide the functionalities of working with other apis to give the opportunity to the client of interacting with the social media platforms of their choice, where their customers are present. 
-
+For this project the app will work with the instagram api but I would like to later on provide the functionalities of working with other apis to give the opportunity to the client of interacting with the social media platforms of their choice, where their customers are present. 
 
 Here are some other examples of other social media interactions besides instagram that I would like to implement: yelp reviews for restaurants, facebook post and tags for online products, google reviews for dentists, etc.
 
-
 **Front End:**
 The app has a front-end where the business owner creates and uses his account to manage his discount settings, and also sees the results of his campaign and can make changes accordingly if wanted. The front-end will display a dashbord with graphs, charts, and tables with the data. The app will be for desktop only because we do not want to encourage the user to change the settings as frequent as he desires with the use of his phone, because changing the settings affects the performance of his campaigns and the user most be certain of the changes he/she makes. The front-end will display other useful information about the app, how it works and future feautures that will be implemented.
-
 
 **Back End:**
 A database that connects the business social media (instagram) account to receive a notification every time is tagged in a post or mentioned in a story.  Notification 
@@ -61,9 +45,6 @@ The app would work separately from the actual business database of the client wh
 
 
 ## Data sources
-In case your app relies on some data to work properly, where are you planning to get that data from?
-
-**Answer:**
 
 The app relies on the social media apis, for now my main focus is the instagram api which is very difficult to get access to, luckily there are some ways already public to access the the api.
 
