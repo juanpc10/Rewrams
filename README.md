@@ -1,6 +1,6 @@
 # rewrams
 
-![wireframe](visuals/rewrams.jpg)
+![wireframe](visuals/rewrams.png)
 
 Rewarding customers
 
