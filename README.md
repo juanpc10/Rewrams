@@ -1,4 +1,4 @@
-# rewrams
+# Rewrams
 
 Rewarding customers
 
@@ -10,10 +10,38 @@ Rewrams automates the response to customers with a coupon anytime customers shar
   <img src="./visuals/rewrams.png">
 </p>
 
-In other words, when a user shares a post or a story (e.g. instagram) tagging the business account
-e.g. @codeworks or @starbucks, rewrams will automatically generate and send a coupon code for
-that person e.g. 25% or 1%, depending on his campaign settings determined in rewrams user interface.
-The code is sent inmediatly to the person via the same channel the notification was sent (instagram dm) and a link to the business website where he or she can proceed to checkout by either product chosen or order type and apply the code sent.
+In simple words, anytime a customer uploads a story in Instagram and tags a business account, the customer receives a coupon, a coupon with a percentage already establised in Rewrams application.
+
+As of now, the application is fully functional with instagram stories but a coupon can be awarded to posts, hashtags, or commentaries as well, if needed by the customer. The application dynamics can also be applied to other social media platforms as well.
+
+Here is a quick representation of how it works:
+
+1. Customer shares story.
+<p align="center">
+  <img src="./visuals/1-customer-shares-story.jpg">
+</p>
+
+2. Customer receives a dicount code.
+<p align="center">
+  <img src="./visuals/2-customer-receives-code.png">
+</p>
+
+3. Customer pays with the discount rewarded.
+<p align="center">
+  <img src="./visuals/3-customerpays.png">
+</p>
+
+4. Customer's friend gets interested in codeworks.
+<p align="center">
+  <img src="./visuals/4-customers-friend-gets-interested.png">
+</p>
+
+5. Customer's friend signs up to codeworks.
+<p align="center">
+  <img src="./visuals/5-new-customer-signsup.png">
+</p>
+
+## Conclusion
 
 Facebook and instagram ads are expensive. The minimum budget is around $5 dls per day to reach and average audience of 500 at the most,not considereing the type of reach out. If you do a conversion type of ad and you track the conversion with a pixel,
 on average, if succesful, you get a conversion after a week or so when the pixel is maturing and facebook is optimizing
@@ -27,24 +55,62 @@ his social media group is to some extent your target audience as well. Allowing 
 is allowing you to advertise to the target audience you need, similar to facebook figuring out what target audience to advertise.
 The difference is you can determine the price and you are also giving the benefit to the client.
 
-Here is a quick representation of how it works:
+## Demo
 
-1. Customer shares story.
+In process
 
-![wireframe](visuals/1-customer-shares-story.jpg)
+## Getting started
 
-2. Customer receives a dicount code.
+- To run the project you will need Git, Node, and npm installed.
 
-![wireframe](visuals/2-customer-receives-code.png)
+## Installation
 
-3. Customer pays with the discount rewarded.
+1. Clone the repository.
+2. Run `npm install` in the client root folder.
+3. Run `npm start` in your client root folder.
+4. Run `npm install` in the coupons-server root folder.
+5. Run `nodemon index.js` in the coupons-server folder.
+6. Run `npm install` in the users-server folder.
+7. Run `npm run server` in the users-server folder.
 
-![wireframe](visuals/3-customerpays.png)
+The instagram reply automatization is run in a separate folder which I have not uploaded. Reach me out if you would like to implement this feature as well.
 
-4. Customer's friend gets interested in codeworks.
+## Environmental variable
 
-![wireframe](visuals/4-customers-friend-gets-interested.png)
+Create a .env file in the **users-server** folder with the following variables:
 
-5. Customer's friend signs up to codeworks.
+db
+MONGO_URI_DEV=
+MONGO_URI_PROD=
 
-![wireframe](visuals/5-new-customer-signsup.png)
+google
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_CALLBACK_URL=
+
+facebook
+FACEBOOK_APP_ID=
+FACEBOOK_SECRET=
+FACEBOOK_CALLBACK_URL=
+
+jwt
+JWT_SECRET_DEV=
+JWT_SECRET_PROD=
+
+site urls
+CLIENT_URL_DEV=
+CLIENT_URL_PROD=
+SERVER_URL_DEV=
+SERVER_URL_PROD=
+
+img folder path
+IMAGES_FOLDER_PATH=/public/images/
+
+## Built with
+
+- [MongoDb](https://www.mongodb.com/) - Application databases
+- [Mongoose](https://mongoosejs.com/) - Object document modeling (ODM) layer that sits on top of the Node.Js MongoDB API
+- [Express](https://expressjs.com/) - Framework layered on top of NodeJS, used to build the backend
+- [React](https://reactjs.org/) - Front end library for building user interfaces.
+- [Node.js](https://nodejs.org/) - JavaScript runtime environment.
+- [Material UI](https://ant.design/) - A design system for enterprise-level products.
