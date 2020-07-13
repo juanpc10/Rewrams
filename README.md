@@ -1,8 +1,8 @@
 # rewrams
 
-<img width="460" height="300" src="./visuals/rewrams.png">
-<!-- ![wireframe](visuals/rewrams.png) -->
-
+<p align="center">
+  <img src="./visuals/rewrams.png">
+</p>
 Rewarding customers
 
 Rewrams is a social media reward system for customers. The application connects to a business entity database
