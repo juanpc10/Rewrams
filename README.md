@@ -41,7 +41,34 @@ Here is a quick representation of how it works:
   <img src="./visuals/5-new-customer-signsup.png">
 </p>
 
-## Conclusion
+# User Interface
+
+1. Home sign out
+<p align="center">
+  <img src="./visuals/homeSignedOut.png">
+</p>
+
+2. Sign In
+<p align="center">
+  <img src="./visuals/signIn.png">
+</p>
+
+3. Home dashboard
+<p align="center">
+  <img src="./visuals/homeDashboard.png">
+</p>
+
+4. Campaign settings
+<p align="center">
+  <img src="./visuals/campaignSettings.png">
+</p>
+
+5. Reply automation
+<p align="center">
+  <img src="./visuals/replyAutomation.png">
+</p>
+
+## Context
 
 Facebook and instagram ads are expensive. The minimum budget is around $5 dls per day to reach and average audience of 500 at the most,not considereing the type of reach out. If you do a conversion type of ad and you track the conversion with a pixel,
 on average, if succesful, you get a conversion after a week or so when the pixel is maturing and facebook is optimizing
@@ -57,21 +84,23 @@ The difference is you can determine the price and you are also giving the benefi
 
 ## Demo
 
-In process
+Video: https://www.youtube.com/watch?v=eCE9CJVE7T0&feature=youtu.be
+Deployment in process.
 
 ## Getting started
 
-- To run the project you will need Git, Node, and npm installed.
+- To run the project you will need Git, Node, mongodb, mongoose, and npm installed.
 
 ## Installation
 
 1. Clone the repository.
 2. Run `npm install` in the client root folder.
 3. Run `npm start` in your client root folder.
-4. Run `npm install` in the coupons-server root folder.
-5. Run `nodemon index.js` in the coupons-server folder.
-6. Run `npm install` in the users-server folder.
-7. Run `npm run server` in the users-server folder.
+4. Run `brew services start mongodb-community` for mac users, for windows and other users check [documentation](https://docs.mongodb.com/manual/tutorial/manage-mongodb-processes/)
+5. Run `npm install` in the coupons-server root folder.
+6. Run `nodemon index.js` in the coupons-server folder.
+7. Run `npm install` in the users-server folder.
+8. Run `npm run server` in the users-server folder.
 
 The instagram reply automatization is run in a separate folder which I have not uploaded. Reach me out if you would like to implement this feature.
 
