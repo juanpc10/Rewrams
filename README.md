@@ -1,13 +1,14 @@
 # rewrams
 
-<p align="center">
-  <img src="./visuals/rewrams.png">
-</p>
 Rewarding customers
 
 Rewrams is a social media reward system for customers. The application connects to a business entity database
 and automates the creation plus distribution of coupons in accordance to a set of rules customizable in rewrams web application.
 Rewrams automates the response to customers with a coupon anytime customers share and tag the business entity account.
+
+<p align="center">
+  <img src="./visuals/rewrams.png">
+</p>
 
 In other words, when a user shares a post or a story (e.g. instagram) tagging the business account
 e.g. @codeworks or @starbucks, rewrams will automatically generate and send a coupon code for
