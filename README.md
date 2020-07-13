@@ -84,8 +84,8 @@ The difference is you can determine the price and you are also giving the benefi
 
 ## Demo
 
-Video: https://www.youtube.com/watch?v=eCE9CJVE7T0&feature=youtu.be
-Deployment in process.
+- Deployment in process.
+- Video: https://www.youtube.com/watch?v=eCE9CJVE7T0&feature=youtu.be
 
 ## Getting started
 
@@ -104,36 +104,42 @@ Deployment in process.
 
 The instagram reply automatization is run in a separate folder which I have not uploaded. Reach me out if you would like to implement this feature.
 
-## Environmental variable
+## Environment variables
 
 Create a .env file in the **users-server** folder with the following variables:
 
 - db
-- MONGO_URI_DEV=
-- MONGO_URI_PROD=
+
+* MONGO_URI_DEV=
+* MONGO_URI_PROD=
 
 - google
-- GOOGLE_CLIENT_ID=
-- GOOGLE_CLIENT_SECRET=
-- GOOGLE_CALLBACK_URL=
+
+* GOOGLE_CLIENT_ID=
+* GOOGLE_CLIENT_SECRET=
+* GOOGLE_CALLBACK_URL=
 
 - facebook
-- FACEBOOK_APP_ID=
-- FACEBOOK_SECRET=
-- FACEBOOK_CALLBACK_URL=
+
+* FACEBOOK_APP_ID=
+* FACEBOOK_SECRET=
+* FACEBOOK_CALLBACK_URL=
 
 - jwt
-- JWT_SECRET_DEV=
-- JWT_SECRET_PROD=
+
+* JWT_SECRET_DEV=
+* JWT_SECRET_PROD=
 
 - site urls
-- CLIENT_URL_DEV=
-- CLIENT_URL_PROD=
-- SERVER_URL_DEV=
-- SERVER_URL_PROD=
+
+* CLIENT_URL_DEV=
+* CLIENT_URL_PROD=
+* SERVER_URL_DEV=
+* SERVER_URL_PROD=
 
 - img folder path
-- IMAGES_FOLDER_PATH=/public/images/
+
+* IMAGES_FOLDER_PATH=/public/images/
 
 ## Built with
 
