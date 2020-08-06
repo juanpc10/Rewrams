@@ -92,6 +92,7 @@ The difference is you can determine the price and you are also giving the benefi
 ## Getting started
 
 - To run the project you will need Git, Node, mongodb, mongoose, and npm installed.
+- The instagram reply automatization is run in a separate folder which I have not uploaded. Reach me out if you would like to implement this feature.
 
 ## Installation
 
@@ -104,7 +105,6 @@ The difference is you can determine the price and you are also giving the benefi
 7. Run `npm install` in the users-server folder.
 8. Run `npm run server` in the users-server folder.
 
-The instagram reply automatization is run in a separate folder which I have not uploaded. Reach me out if you would like to implement this feature.
 
 ## Environment variables
 
