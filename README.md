@@ -84,8 +84,9 @@ The difference is you can determine the price and you are also giving the benefi
 
 ## Demo
 
-- Deployment in process.
+- https://rewrams-client-and-users.herokuapp.com/
 - Video: https://www.youtube.com/watch?v=eCE9CJVE7T0&feature=youtu.be
+- To test how the app works, you can upload an ig story and tag @testingcauseeffect. You will receive a coupon which you can use at https://causeffct.com
 
 ## Getting started
 
