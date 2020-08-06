@@ -110,36 +110,36 @@ The instagram reply automatization is run in a separate folder which I have not 
 
 Create a .env file in the **users-server** folder with the following variables:
 
-- db
+Db
 
 * MONGO_URI_DEV=
 * MONGO_URI_PROD=
 
-- google
+Google
 
 * GOOGLE_CLIENT_ID=
 * GOOGLE_CLIENT_SECRET=
 * GOOGLE_CALLBACK_URL=
 
-- facebook
+Facebook
 
 * FACEBOOK_APP_ID=
 * FACEBOOK_SECRET=
 * FACEBOOK_CALLBACK_URL=
 
-- jwt
+JWT
 
 * JWT_SECRET_DEV=
 * JWT_SECRET_PROD=
 
-- site urls
+Site urls
 
 * CLIENT_URL_DEV=
 * CLIENT_URL_PROD=
 * SERVER_URL_DEV=
 * SERVER_URL_PROD=
 
-- img folder path
+Img folder path
 
 * IMAGES_FOLDER_PATH=/public/images/
 
