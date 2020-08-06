@@ -43,12 +43,12 @@ Here is a quick representation of how it works:
 
 # User Interface
 
-1. Home sign out
+1. Home signed out
 <p align="center">
   <img src="./visuals/homeSignedOut.png">
 </p>
 
-2. Sign In
+2. Sign in
 <p align="center">
   <img src="./visuals/signIn.png">
 </p>
