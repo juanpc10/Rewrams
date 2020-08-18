@@ -85,7 +85,7 @@ The difference is you can determine the price and you are also giving the benefi
 ## Demo
 
 - To test how the app works, you can upload an ig story and tag @testingcauseeffect. You will receive a coupon which you can use at https://causeffct.com
-- Here is how the app looks for a client that signs up and uses the service, he can update his campaign settings in the front-end https://rewrams-client-and-users.herokuapp.com/
+- Here is how the app looks for a client that signs up and uses the service, he can update his campaign settings in the front-end https://rewrams-client.herokuapp.com/
 - Video: https://www.youtube.com/watch?v=eCE9CJVE7T0&feature=youtu.be
 
 
